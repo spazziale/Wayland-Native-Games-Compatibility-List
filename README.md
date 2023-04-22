@@ -77,7 +77,7 @@ A curated list of trick to run native linux games on Wayland
 | Transistor | no | - | SDL2: logo and crash |
 | Unturned | no | Unity | SDL2: crash |
 | VA-11 Hall-A: Cyberpunk Bartender Action | no | GameMaker Studio | SDL2 : no effect |
-| VirtuaVerse | yes* | unity | Need `SDL_DYNAMIC_API=libSDL2-2.0.so SDL_VIDEODRIVER=wayland` |
+| VirtuaVerse | yes* | Unity | Need `SDL_DYNAMIC_API` and `SDL_VIDEODRIVER` |
 | War Thunder | no | - | SDL2 : no effect |
 | We. The Revolution | no | - | SDL2: no visible window |
 | Whispering Willows | no | Unity | SDL2: crash |
@@ -90,6 +90,26 @@ A curated list of trick to run native linux games on Wayland
 | **yes** | Run on Wayland natively without any configuration |
 | **yes*** | Can work on Wayland natively, but need some tinkering with the environment variables |
 | **no** | Require XWayland to run |
+
+## Environment Variables
+
+You need to install the sdl2 package on your distro before doing this.
+
+| Launcher | How to find it |
+|----------|----------------|
+| Steam | Library > Properties > Launch options > Add environment variables before `%command%` |
+| Heroic game Launcher | Library > Settings > Environment Variables |
+
+### SDL_VIDEODRIVER
+
+To run an SDL2 application on Wayland, set `SDL_VIDEODRIVER=wayland` 
+
+### SDL_DYNAMIC_API
+`SDL_DYNAMIC_API` override the SDL library used by a particular game. Useful if the game use a old version without Wayland support.
+
+Fedora, Arch: `SDL_DYNAMIC_API=/usr/lib64/libSDL2-2.0.so`
+
+Flatpak: `SDL_DYNAMIC_API="/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0"`
 
 ## Special thanks
 Forked from: https://gist.github.com/mrintrepide/6bf1bf5cc087928009545d4d28c4af08
