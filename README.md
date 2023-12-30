@@ -71,6 +71,7 @@ A curated list of trick to run native linux games on Wayland
 | Sound of Drop - fall into poison - | yes* | - | SDL2 preload |
 | Star Conflict | no | Hammer Engine | SDL2: crash |
 | Stellaris | no | Clausewitz Engine | SDL2: crash |
+| Tabletop Simulator | yes* | - | Need `SDL_DYNAMIC_API` and `SDL_VIDEODRIVER` |
 | Terraria | yes* | FNA-XNA | SDL2 preload mouse KO |
 | The Coma: Recut | no | - | SDL2: crash |
 | The Witcher 2: Assassins of Kings Enhanced Edition | yes* | REDengine | SDL2 preload need mouse border calibration |
